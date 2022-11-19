@@ -1,0 +1,182 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-auto-rows: 60px 1fr auto;
+    grid-row-gap: 10px;
+}
+
+nav {
+    grid-area: 1/1/2/-1;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    background-color: #EEEEEE;
+    width: 100%;
+
+}
+
+main {
+    grid-row: 2/span1;
+    align-self: center;
+}
+
+.footer {
+    grid-row: 3/span 1;
+    background-color: #EEEEEE;
+    text-align: center;
+}
+
+.logo {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+#header-img {
+    width: 100%;
+    height: auto;
+}
+
+nav > ul {
+    width: 70%;
+}
+
+#nav-bar {
+    position: fixed;
+    top: 0;
+}
+
+#footer-links > li, .nav-link {
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+
+
+nav {
+    flex-grow: 1;
+}
+
+    nav > ul {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+    }
+
+#form {
+    text-align: center;
+}
+
+#submit {
+    width: 150px;
+    padding: 5px 10px;
+    font-weight: bold;
+    margin: 10px auto;
+    display: block;
+    background-color: rgb(241,196,15);
+    border: none;
+    border-radius: 3px;
+}
+
+#features {
+    width: 70%;
+    margin: 5% auto;
+}
+
+#feature-description {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    margin: 5px 0;
+    padding: 0;
+}
+
+#video {
+    display: block;
+    margin: 5% auto;
+    max-width: 600px;
+    width: 80%;
+    aspect-ratio: 16/9;
+    height: auto;
+}
+
+#pricing {
+    display: flex;
+    justify-content: space-around;
+    align-items: space-around;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+#product {
+    border: 1px solid black;
+    text-align: center;
+    width: 300px;
+    margin: 10px 0;
+}
+
+#product-name {
+    background-color: #EEEEEE;
+    width: 100%;
+    height: 15%;
+    padding: 2%;
+    font-size: 1.2em;
+    font-weight: bolder;
+}
+
+#product-price {
+    font-weight: bold;
+    margin: 10px;
+}
+
+#select-button {
+    display: block;
+    margin: 2% auto;
+    width: 40%;
+    height: 20%;
+    background-color: rgb(241,196,15);
+    border: none;
+    border-radius: 3px;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+}
+
+    #select-button:hover {
+        background-color: darkorange;
+        cursor: pointer;
+    }
+
+@media only screen and (max-width:1200px) {
+    #pricing:after {
+        content: '';
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    a {
+        font-size: 0.8em;
+    }
+
+    .logo {
+        width: 40%;
+    }
+}
